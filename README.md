@@ -17,7 +17,7 @@ This is a **React.js** authentication dashboard with user login, signup, and ses
 ## 📂 Project Setup
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com//auth-dashboard.git
+git clone https://github.com/shubhampagar24/Login-Signup-using-LocalStorage.git
 cd auth-dashboard
 ```
 
@@ -59,7 +59,7 @@ git checkout -b main origin/main
 ```
 
 ## 🏗️ Deployment
-You can deploy it on **Vercel** or **Netlify**.
+You can deploy it on **Vercel** .
 
 ## 📜 License
 This project is licensed under the MIT License.
