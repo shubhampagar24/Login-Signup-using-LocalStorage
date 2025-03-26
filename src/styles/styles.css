@@ -1,0 +1,373 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e0e;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+  padding-top: 70px; /* Ensure content doesn't overlap with navbar */
+}
+
+/* Navbar Styles */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 15px 30px; */
+  background: linear-gradient(90deg, #ff6b6b, #ffb142, #1dd1a1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+
+.navbar h1 {
+  font-size: 22px;
+  font-weight: bold; 
+  margin-left: 30px;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+  background-color: rgb(242, 88, 88);
+  padding: 10px;
+ 
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+.logout-btn {
+  background: #ff4757;
+  border: 2px solid black;
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #e84118;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  margin-left: 220px; /* Adjust for sidebar */
+  padding: 20px;
+}
+
+/* Authentication Container */
+.auth-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.auth-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.auth-container input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.auth-container button {
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff6b6b;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.auth-container button:hover {
+  background: #ff4757;
+}
+
+.error {
+  color: #ff4757;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Dashboard */
+.dashboard-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-left: 220px; /* Ensures sidebar spacing */
+}
+
+.dashboard-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1dd1a1;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 16px;
+  color: #ffb142;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #2d3436;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+.sidebar :visited
+{
+  background-color: #1dd1a1;
+  color: #ffb142;
+}
+
+.sidebar a {
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: #ff6b6b;
+}
+
+/* Data Table */
+.table-container {
+  width: 80%;
+  margin: 20px auto;
+  overflow-x: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+th {
+  background: #ff9f43;
+  color: white;
+}
+
+td {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+td:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding-top: 90px; /* Adjust padding for mobile navbar */
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar h1 {
+    margin-bottom: 10px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    margin-left: 0; /* Remove sidebar margin */
+  }
+
+  .auth-container {
+    width: 90%;
+  }
+
+  .table-container {
+    width: 95%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+  }
+
+  .dashboard-container {
+    margin-left: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Navbar Styles */
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Save Layout Button */
+.save-layout-btn {
+  padding: 12px 20px;
+  background: #1dd1a1;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.save-layout-btn:hover {
+  background: #10ac84;
+}
+
+/* Saved Layout Section */
+.saved-layout {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.saved-layout h3 {
+  font-size: 20px;
+  color: #ffb142;
+}
+
+.saved-layout p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+
+.delete-btn {
+  background: #d63031;
+  border: 2px solid black;
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #b71c1c;
+}
